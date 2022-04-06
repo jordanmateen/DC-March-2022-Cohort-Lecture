@@ -1,0 +1,130 @@
+body{
+    background: linear-gradient(10deg, rgb(6, 1, 53) 20%, rgba(74, 0, 117, 0.8) 50%,rgba(0, 0, 0, 1)) no-repeat;
+    color: white;
+    height: 100vh;
+    
+}
+
+/* .body{
+    height: 100vh;
+    background: linear-gradient(10deg, rgb(0, 0, 0, 1), rgba(74, 0, 117, 0.8),rgba(0, 0, 0, 1));
+    color: white;
+} */
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.right{
+    display: flex;
+    width: 50vw;
+    height: 75vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+
+}
+
+.left{
+    display: flex;
+    width: 50vw;
+    height: 75vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.header{
+    /* display: flex; */
+    font-family: 'Montserrat', serif;
+    /* justify-content: center; */
+}
+
+.sub-header{
+    /* display: flex; */
+    font-family: 'Montserrat', serif;
+    /* justify-content: center; */
+}
+
+.sub-header-content{
+    width: 70%;
+    margin-top: 30px;
+}
+
+.bcard{
+    height: 180px;
+    width: 350px;
+    box-shadow: 5px 5px 60px #000000;
+    padding: 10px;
+    border-radius: 15px;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);;
+    /* background: linear-gradient(100deg, rgba(34,193,195,1) 10%, rgba(253,187,45,1) 100%); */
+    color: black;
+}
+
+.bcard-content{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    margin: 20px;
+    height: 90px;
+}
+
+.justify-text{
+    text-align: justify;
+}
+
+.content{
+    margin-top: 30px;
+    width: 70%;
+
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.name-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-type{
+    font-size: 20px;
+}
+
+.card-number{
+    font-size: 20px;
+}
+
+.lgroup{
+    margin-top: 60px;
+    background: transparent;
+}
+
+.footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-link{
+    text-decoration: none;
+    color: white;
+}
+
+.signup-header{
+    font-family: 'Montserrat';
+}
+
+.signup-wrapper{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
