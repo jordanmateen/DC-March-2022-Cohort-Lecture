@@ -5,12 +5,6 @@ body{
     
 }
 
-/* .body{
-    height: 100vh;
-    background: linear-gradient(10deg, rgb(0, 0, 0, 1), rgba(74, 0, 117, 0.8),rgba(0, 0, 0, 1));
-    color: white;
-} */
-
 .wrapper{
     display: flex;
     flex-direction: row;
@@ -37,15 +31,11 @@ body{
 }
 
 .header{
-    /* display: flex; */
     font-family: 'Montserrat', serif;
-    /* justify-content: center; */
 }
 
 .sub-header{
-    /* display: flex; */
     font-family: 'Montserrat', serif;
-    /* justify-content: center; */
 }
 
 .sub-header-content{
