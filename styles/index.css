@@ -57,9 +57,9 @@ body{
 .bcard-content{
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
-    margin: 20px;
-    height: 90px;
+    justify-content:space-between;
+    margin-left: 20px;
+    height: 100px;
 }
 
 .justify-text{
@@ -88,6 +88,8 @@ body{
 
 .card-number{
     font-size: 20px;
+    color: rgba(2, 79, 110, 0.397);
+    text-shadow: 0px 1px 0px rgb(0, 82, 150);
 }
 
 .lgroup{
@@ -117,4 +119,14 @@ body{
     align-items: center;
     color: white;
 
+}
+
+.card-holder-name{
+    font-size: 15px;
+    color: rgb(2, 80, 110);
+    text-shadow: 0px 1px 0px rgba(150, 150, 150, 0.5);
+}
+
+.nav-color{
+    color: white;
 }
