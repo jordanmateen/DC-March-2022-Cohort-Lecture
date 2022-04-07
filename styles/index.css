@@ -2,9 +2,7 @@ body{
     background: linear-gradient(10deg, rgb(6, 1, 53) 20%, rgba(62, 1, 97, 0.8) 80%, rgb(90, 0, 56)) no-repeat;
     color: white;
     height: 100vh;
-    
 }
-
 .wrapper{
     display: flex;
     flex-direction: row;
@@ -128,4 +126,24 @@ body{
 
 .nav-color{
     color: white;
+}
+
+@media screen and (max-width: 1000px) {
+    body{
+        height: auto;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .right {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+    .left {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
 }
