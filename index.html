@@ -72,7 +72,7 @@
                 </ul>
             </div>
             <div class="left">
-                <div class="bcard" >
+                <div class="bcard" id="b-card">
                     <div class="logo">
                         <a class="navbar-brand" href="#">
                             <img src="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
@@ -98,11 +98,292 @@
                 </div>
             </div>
         </div>
-        <div class="footer container ">
-            <div class="">
+
+        <div class="container ">
+            <div class="footer">
                 <a class="about-link" href="./signup.html">Get Yours Today<span aria-hidden="true">&raquo;</span></a>
             </div>
+            <button id="show-hide" type="button" class="btn btn-light">Hide Crypto Card</button>
         </div>
+        
     </div>
+<script>
+    const cryptoData = [
+  {
+    "_id": "62562136555f59def1c56ab6",
+    "index": 0,
+    "guid": "07b084f7-43d5-4a6b-b674-e486ed0af664",
+    "isActive": true,
+    "balance": "$2,812.05",
+    "picture": "http://placehold.it/32x32",
+    "age": 23,
+    "eyeColor": "blue",
+    "name": "Kelley Guthrie",
+    "gender": "female",
+    "company": "OZEAN",
+    "email": "kelleyguthrie@ozean.com",
+    "phone": "+1 (990) 556-2565",
+    "address": "703 Dunham Place, Wollochet, Colorado, 9478",
+    "about": "Irure anim commodo ullamco dolor anim. Deserunt consequat mollit commodo cillum et est. Sit eu magna nostrud fugiat eiusmod amet irure. Officia cupidatat voluptate excepteur enim aliquip et duis elit fugiat labore irure Lorem qui.\r\n",
+    "registered": "2019-07-22T10:22:10 +04:00",
+    "latitude": -80.579431,
+    "longitude": 75.104473,
+    "tags": [
+      "sint",
+      "minim",
+      "pariatur",
+      "cupidatat",
+      "sunt",
+      "nulla",
+      "culpa"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Chandra Benton"
+      },
+      {
+        "id": 1,
+        "name": "Dorothea Rodriquez"
+      },
+      {
+        "id": 2,
+        "name": "Mays Richardson"
+      }
+    ],
+    "greeting": "Hello, Kelley Guthrie! You have 1 unread messages.",
+    "favoriteFruit": "apple"
+  },
+  {
+    "_id": "625621362e9efde8f9e4e68d",
+    "index": 1,
+    "guid": "8c4d419b-00cf-4f00-ac85-0e8fd5dcefe0",
+    "isActive": false,
+    "balance": "$2,505.11",
+    "picture": "http://placehold.it/32x32",
+    "age": 26,
+    "eyeColor": "blue",
+    "name": "Cameron Kidd",
+    "gender": "male",
+    "company": "SATIANCE",
+    "email": "cameronkidd@satiance.com",
+    "phone": "+1 (896) 437-2996",
+    "address": "219 Miller Place, Stevens, South Carolina, 8064",
+    "about": "Proident exercitation commodo sunt dolor aliquip aute cupidatat reprehenderit in aute labore. Aute esse aliquip dolor officia cupidatat amet. Deserunt consequat sunt non fugiat fugiat voluptate id nulla esse veniam nisi ex laborum. Officia proident commodo labore do qui laboris ullamco non mollit dolore deserunt ipsum. Minim proident consequat aliqua aute ullamco enim reprehenderit anim eu qui ut esse laboris. In laborum minim ex occaecat non sint sint in enim. Adipisicing ullamco voluptate duis amet occaecat eu.\r\n",
+    "registered": "2014-10-15T04:29:19 +04:00",
+    "latitude": 16.301949,
+    "longitude": 73.74475,
+    "tags": [
+      "adipisicing",
+      "aliquip",
+      "sunt",
+      "sunt",
+      "exercitation",
+      "irure",
+      "consectetur"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Corrine Thornton"
+      },
+      {
+        "id": 1,
+        "name": "Virginia Merritt"
+      },
+      {
+        "id": 2,
+        "name": "Olga Carrillo"
+      }
+    ],
+    "greeting": "Hello, Cameron Kidd! You have 5 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "625621361e1863edf94e3cf8",
+    "index": 2,
+    "guid": "70470ac2-c691-4749-adc4-e9839ac0f47b",
+    "isActive": true,
+    "balance": "$2,770.52",
+    "picture": "http://placehold.it/32x32",
+    "age": 40,
+    "eyeColor": "green",
+    "name": "Guadalupe Boyle",
+    "gender": "female",
+    "company": "ZORK",
+    "email": "guadalupeboyle@zork.com",
+    "phone": "+1 (864) 466-2434",
+    "address": "695 Garland Court, Hessville, Georgia, 7303",
+    "about": "Tempor consectetur fugiat ut exercitation. Cupidatat cupidatat minim quis cupidatat sit excepteur consequat adipisicing do aliquip. Minim tempor officia officia do ullamco ea ea consequat excepteur.\r\n",
+    "registered": "2014-01-01T06:56:26 +05:00",
+    "latitude": 80.384163,
+    "longitude": 22.457363,
+    "tags": [
+      "voluptate",
+      "et",
+      "ut",
+      "laboris",
+      "culpa",
+      "consectetur",
+      "nulla"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Lynch Mcneil"
+      },
+      {
+        "id": 1,
+        "name": "Mckenzie Avery"
+      },
+      {
+        "id": 2,
+        "name": "Gross Griffith"
+      }
+    ],
+    "greeting": "Hello, Guadalupe Boyle! You have 3 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "625621362fcc78a1e8635773",
+    "index": 3,
+    "guid": "06a0b317-161b-45be-b35e-7b8ce0eb83ff",
+    "isActive": false,
+    "balance": "$3,431.36",
+    "picture": "http://placehold.it/32x32",
+    "age": 23,
+    "eyeColor": "brown",
+    "name": "Abby Hays",
+    "gender": "female",
+    "company": "GENMOM",
+    "email": "abbyhays@genmom.com",
+    "phone": "+1 (951) 480-3367",
+    "address": "180 Oak Street, Cliffside, Hawaii, 279",
+    "about": "Eiusmod aute sunt cillum officia laborum magna non sunt adipisicing magna. Mollit elit elit voluptate eu ad eu voluptate magna dolor commodo reprehenderit do id. Do elit nostrud laborum cillum adipisicing id voluptate mollit.\r\n",
+    "registered": "2022-04-07T09:22:16 +04:00",
+    "latitude": 78.074271,
+    "longitude": 107.08794,
+    "tags": [
+      "ad",
+      "tempor",
+      "nostrud",
+      "amet",
+      "ad",
+      "dolore",
+      "labore"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Natasha Finch"
+      },
+      {
+        "id": 1,
+        "name": "Helene Morales"
+      },
+      {
+        "id": 2,
+        "name": "Natalia Gill"
+      }
+    ],
+    "greeting": "Hello, Abby Hays! You have 2 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "6256213645d1ec84a997ac4e",
+    "index": 4,
+    "guid": "b61050ea-8ddf-4d0e-8dad-578d76b5897f",
+    "isActive": true,
+    "balance": "$3,039.88",
+    "picture": "http://placehold.it/32x32",
+    "age": 25,
+    "eyeColor": "brown",
+    "name": "Shelia Kaufman",
+    "gender": "female",
+    "company": "ZILLANET",
+    "email": "sheliakaufman@zillanet.com",
+    "phone": "+1 (902) 572-3481",
+    "address": "150 Schermerhorn Street, Herald, West Virginia, 9064",
+    "about": "Proident deserunt officia ipsum Lorem enim occaecat cupidatat est quis. Non aliquip et id ea qui Lorem non. Duis duis anim nulla consectetur officia id et duis mollit nulla anim in. Occaecat reprehenderit velit ea aute nostrud ex. Adipisicing officia quis voluptate labore dolor officia pariatur nisi officia magna non. Eiusmod ex ad cillum fugiat sit magna eiusmod aliquip deserunt fugiat nisi tempor ullamco. Labore mollit ad non duis.\r\n",
+    "registered": "2014-01-14T12:29:59 +05:00",
+    "latitude": 74.91731,
+    "longitude": -116.667949,
+    "tags": [
+      "ea",
+      "commodo",
+      "culpa",
+      "dolor",
+      "ea",
+      "dolor",
+      "ipsum"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Daphne Chaney"
+      },
+      {
+        "id": 1,
+        "name": "Rachelle Martin"
+      },
+      {
+        "id": 2,
+        "name": "Henson Livingston"
+      }
+    ],
+    "greeting": "Hello, Shelia Kaufman! You have 10 unread messages.",
+    "favoriteFruit": "apple"
+  },
+  {
+    "_id": "625621362b7c09d3633a57fd",
+    "index": 5,
+    "guid": "29142541-8ee2-430f-bf6b-1c8f63e2c9b9",
+    "isActive": false,
+    "balance": "$1,011.33",
+    "picture": "http://placehold.it/32x32",
+    "age": 20,
+    "eyeColor": "green",
+    "name": "Geraldine Bond",
+    "gender": "female",
+    "company": "MANUFACT",
+    "email": "geraldinebond@manufact.com",
+    "phone": "+1 (813) 535-3446",
+    "address": "235 Clara Street, Clarksburg, Puerto Rico, 4536",
+    "about": "Sunt sunt mollit magna sit mollit reprehenderit amet laboris laboris veniam anim nisi. Adipisicing consequat anim cupidatat do ullamco consequat labore ullamco nostrud dolor. Proident dolor nisi eiusmod elit labore ullamco ex Lorem duis id occaecat consectetur consequat. Quis commodo ea proident magna sint proident aute. Qui id non pariatur consequat mollit eiusmod laboris eiusmod minim consequat fugiat. Sunt velit dolor aute excepteur non incididunt culpa ullamco sint voluptate est. Ullamco id proident sit elit eu ad nostrud adipisicing aliquip duis.\r\n",
+    "registered": "2020-08-04T09:38:08 +04:00",
+    "latitude": 56.060964,
+    "longitude": 56.09536,
+    "tags": [
+      "elit",
+      "veniam",
+      "quis",
+      "ad",
+      "irure",
+      "esse",
+      "exercitation"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Jenny Callahan"
+      },
+      {
+        "id": 1,
+        "name": "Lowery Collier"
+      },
+      {
+        "id": 2,
+        "name": "Deleon Bernard"
+      }
+    ],
+    "greeting": "Hello, Geraldine Bond! You have 10 unread messages.",
+    "favoriteFruit": "banana"
+  }
+
+];
+
+window.userData = cryptoData
+</script>
+<script src="./crypto.js"></script>
 </body>
 </html>

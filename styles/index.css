@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(10deg, rgb(6, 1, 53) 20%, rgba(62, 1, 97, 0.8) 80%, rgb(90, 0, 56)) no-repeat;
+    background: linear-gradient(10deg, rgb(5, 1, 42) 50%, rgba(31, 0, 48, 0.8), rgb(56, 0, 34)) no-repeat;
     color: white;
     height: 100vh;
 }
@@ -127,6 +127,23 @@ body{
 .nav-color{
     color: white;
 }
+
+/* .modal-wrapper{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+} */
+
+/* .modal{
+    display: flex;
+    justify-content: center;
+    height: 33%;
+    width: 33%;
+} */
+
 
 @media screen and (max-width: 1000px) {
     body{
