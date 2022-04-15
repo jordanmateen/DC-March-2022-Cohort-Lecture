@@ -1,0 +1,145 @@
+body{
+    background: linear-gradient(10deg, rgb(5, 1, 42) 50%, rgba(31, 0, 48, 0.8), rgb(56, 0, 34)) no-repeat;
+    color: white;
+    height: 100vh;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+}
+
+.screen {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 50px;
+    border: .10px solid;
+
+}
+.calculator{
+    width: 33%;
+}
+
+
+.button{
+    border: .10px solid;
+    height: 50px;
+    width:50px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: rgb(80, 97, 3);
+    transition: 300ms;
+}
+
+.special{
+    background-color: rgb(56, 0, 56);
+}
+
+.equal {
+    background-color: rgb(27, 26, 27);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body{
+    background: linear-gradient(10deg, rgb(5, 1, 42) 50%, rgba(31, 0, 48, 0.8), rgb(56, 0, 34)) no-repeat;
+    color: white;
+    height: 100vh;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:100vw;
+}
+
+.number{
+    font-size: 100px;
+    height: 100px;
+    margin-bottom: 40px;
+}
+
+.calculator{
+    width: 33%;
+}
+.button{
+   border: .5px solid;
+   width: 50px;
+   height: 50px;
+   border-color: rgb(255, 255, 255);
+}
+
+.button:hover{
+    background-color: rgb(162, 162, 162);
+    cursor: pointer;
+    transition: 400ms;
+    color: white
+}
+
+.display{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.display-wrapper{
+    border: .5px solid;
+    height: 50px;
+} */
+
+/* .special {
+    background: rgb(85, 0, 121);
+    color: white;
+} */
