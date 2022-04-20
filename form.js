@@ -37,7 +37,7 @@ const renderCompletedTodos = () => {
 
 const completeTodo = (todos, index) => {
     // Add the todo to the completed todos array
-    todoAppData.completedTodos.push(todos[index]) // {title: title, note: note}
+    todoAppData.completedTodos.push(todos[index])
     
     // take an element off the todo array
     // renderTodo
