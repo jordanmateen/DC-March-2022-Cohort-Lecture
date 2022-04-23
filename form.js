@@ -37,7 +37,7 @@ const renderCompletedTodos = () => {
 
 const completeTodo = (todos, index) => {
     // Add the todo to the completed todos array
-    todoAppData.completedTodos.push(todos[index]) // {title: title, note: note}
+    todoAppData.completedTodos.push(todos[index])
     
     // take an element off the todo array
     // renderTodo
@@ -58,7 +58,6 @@ const removeTodo = (index) =>{
 const renderTodo = () =>{
     // give UI feedback when a user adds a todo
     notCompletedTodos.innerHTML = todoAppData.todos.map((todo, index) =>{ // [1,2,3,4]
-      console.log(todo)
       const { title, note } = todo // destructuring
         return `
         <div id="note-${index}" class="container note">
@@ -82,6 +81,38 @@ const setTodo = (title, note)=>{
     renderTodo();
 
 };
+
+const errorState = (error) => {
+    errorMessage.innerHTML = error
+    errorMessage.style.fontSize = '10px'
+    errorMessage.style.color = 'red'
+    submitBtn.setAttribute('disabled', '')
+    submitBtn.className = 'btn btn-danger'
+}
+
+const appState = () => {
+    errorMessage.style.display = 'none'
+    submitBtn.removeAttribute('disabled', '')
+    submitBtn.className = 'btn btn-primary'
+}
+
+titleField.addEventListener('blur', ()=>{
+    // have a regular expression aka regex
+    // const regex = new RegExp('regex')  // this is the built in Js regex constructor
+    // regex.test('va;ue we want tp test')
+    // titleField.value.match(regex) // []  loop through and check
+    const regex = /[A-Za-z0-9]/g
+
+    // validate my input
+    const isValid = regex.test(titleField.value)
+
+    if(!isValid){
+        errorState('Input must be a letter in format A-Z  a-z 0-9 or combination')
+    }else{
+        appState()
+    }
+
+})
 
 submitBtn.addEventListener('click', (e)=>{
     e.preventDefault();
